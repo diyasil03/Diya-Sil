@@ -1,16 +1,15 @@
-#include<stdio.h> /*header files*/
-#include<conio.h>
+#include<stdio.h> 
 #include<string.h>
 #include<time.h>
 #include<stdlib.h>
-void begin(); /*function declarations*/
+void begin();
 void program();
 void show_details();
 void complaints_suggestions();
 void book_room();
 void mini_casino();
 void GuessGame();
-struct { /*structure that stores details of persons*/
+struct { 
  char name[20];
  char address[50];
  char email_id[30];
@@ -27,15 +26,11 @@ person.billprice =0;
  printf(".............WELCOME TO GHUMTEE RIVIERA RESTAURANT AND LODGE..............\n");
  printf("Please enter your details before moving to the main page!\n");
  printf("please enter your name:");
- gets(person.name);
  printf("enter your address:");
- gets(person.address);
  printf("enter your nationality:");
- gets(person.nationality);
  printf("enter your email_id:");
- gets(person.email_id);
  system("cls");
- time_t timer = time(NULL);/*to get the present local time*/
+ time_t timer = time(NULL);
  begin();
  return 0;
  }
@@ -43,8 +38,7 @@ void begin(void){
  int decide;
  printf("\n-----------------------HOME PAGE--------------------------\n");
  printf("\n HOW CAN WE HELP YOU?\n\n");
- printf("\n1.Book a room\n2.Program\n3.mini casino\n4.show my details\n5.complaints or 
-suggestions\n6.check out\n7.about us\n");
+ printf("\n1.Book a room\n2.Program\n3.mini casino\n4.show my details\n5.complaints or suggestions\n6.check out\n7.about us\n");
  scanf("%d",&decide);
  switch(decide)
  {
@@ -71,17 +65,12 @@ book_room();
  break;
  case 7:
  printf("GHUMTEE RIVERA RESORT:\n");
- printf(" A beautiful cosmopolitan destination for a picturesque natural scenario, a blend of Natural 
-and Artificial effort located on the border of");
- printf("Chitwan National park (A UNESCO World Heritage Site) allows you to enjoy the breeze of 
-Rapti River flowing through the lap of Chitwan National Park.");
- printf("Enjoying the spectacular sunset and its reflection on Rapti River along with grazing of deer 
-on the bank by relaxing on our rugged cottages");
-printf("is the memorable experience you could enjoy only at GHUMTEE RIVERA RESORT. \n");
- printf("We would be more than happy to experience you Jungle Safari, canoe ride to Crocodile 
-Breeding Farm and Ox-Cart ride.");
- printf("Clean and Comfortable room, Hot and Cold Water facilities, beautiful garden, family 
-environment, local food are our salient features to give you taste of our Nepalese Culture.");
+ printf(" A beautiful cosmopolitan destination for a picturesque natural scenario, a blend of Natural and Artificial effort located on the border of");
+ printf("Chitwan National park (A UNESCO World Heritage Site) allows you to enjoy the breeze of Rapti River flowing through the lap of Chitwan National Park.");
+ printf("Enjoying the spectacular sunset and its reflection on Rapti River along with grazing of deer on the bank by relaxing on our rugged cottages");
+ printf("is the memorable experience you could enjoy only at GHUMTEE RIVERA RESORT. \n");
+ printf("We would be more than happy to experience you Jungle Safari, canoe ride to Crocodile Breeding Farm and Ox-Cart ride.");
+ printf("Clean and Comfortable room, Hot and Cold Water facilities, beautiful garden, family environment, local food are our salient features to give you taste of our Nepalese Culture.");
  printf("Satisfying you totally with our unique culture is our primary motto.\n");
  begin();
  break;
@@ -260,18 +249,7 @@ printf("\nYour inhand_cash is now = %d \n", *inhand_cash);
 void mini_casino()
 {
 int amount_bet, inhand_cash;
-/*
-You have to guess the right number among 3 numbers.
-The position where right number is is
-named as 'R' and rest two are named as 'N'
-If your guess is wrong, you loose the
-amount_bet from your inhand_cash
-If you guess it right, you win
-twice the amount_bet in your inhand_cash
-Keep playing and keep winning
-until you go out of cash
-*/
- printf("\n////////-WELCOME TO MINI CASINO-\\\\\\\\\\\\ \n");
+printf("\n////////-WELCOME TO MINI CASINO-\\\\\\\\\\\\ \n");
 printf("\n----Enter the inhand_cash you have right now---- :\n ");
 scanf("%d", &inhand_cash);
 while (inhand_cash > 0) {
@@ -287,5 +265,6 @@ printf("\n\""
 " \nSorry you don't have enough cash to play more,\n ");
 printf("\nDo come next time\""
 "\n\n");
-printf("\nThank You for playing \n");}
+printf("\nThank You for playing \n");
+}
 }
